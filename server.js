@@ -16,6 +16,7 @@ app.use(express.json());
 
 // Routes
 // app.use('/api', require('./routes/api'));
+app.use('/shipments',require('./routes/shipment.js'));
 
 
 app.get('/', (req, res) => {
@@ -47,3 +48,6 @@ app.listen(PORT, () => {
 }).on('error', (err) => {
   console.error('Server failed to start:', err.message);
 });
+
+
+
